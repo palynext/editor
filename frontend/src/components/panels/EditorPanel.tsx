@@ -35,7 +35,7 @@ export default function EditorPanel() {
   return (
     <Editor
     height={"100vh"}
-      defaultLanguage="javascript"
+      defaultLanguage="typescript"
       defaultValue="// NeoTron Editor Ready"
       theme="tron-dark"
       onMount={handleMount}

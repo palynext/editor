@@ -4,7 +4,7 @@ import { panelRegistry } from "@/core/panel/PanelRegistry";
 import { PanelInstance } from "@/core/panel/PanelTypes";
 
 export default function FloatingPanel({ panel }: { panel: PanelInstance }) {
-  const { movePanel, closePanel } = usePanelManager();
+  const { movePanel, closePanel, focusPanel } = usePanelManager();
   const desc = panelRegistry.get(panel.panelId);
   const Component = desc?.component;
 
@@ -16,6 +16,10 @@ export default function FloatingPanel({ panel }: { panel: PanelInstance }) {
         top: panel.y,
         width: panel.w,
         height: panel.h,
+        zIndex: panel.zIndex,
+      }}
+      onMouseDown={() => {
+        focusPanel(panel.instanceId);
       }}
     >
       <TronPanel className="h-full">

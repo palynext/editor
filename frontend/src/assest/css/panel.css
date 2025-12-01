@@ -1,0 +1,24 @@
+.neon-border {
+  border: 1px solid rgba(0, 255, 255, 0.4);
+  box-shadow: 0 0 10px #0ff, inset 0 0 20px rgba(0, 255, 255, 0.2);
+}
+
+.floating-panel {
+  backdrop-filter: blur(12px);
+}
+
+.before\:bg-hud-grid::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: 10px 10px;
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 255, 255, 0.15) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(0, 255, 255, 0.15) 1px, transparent 1px);
+  opacity: 0.2;
+}
+
+

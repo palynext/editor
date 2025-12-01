@@ -1,4 +1,4 @@
-const STORAGE_KEY = "neotron_panel_layout";
+const STORAGE_KEY = "panel_layout";
 
 export function savePanelLayout(state: any) {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
